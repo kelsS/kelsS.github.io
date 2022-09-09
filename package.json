@@ -17,5 +17,7 @@
     "url": "https://github.com/kelsS/kelsS.github.io/issues"
   },
   "homepage": "https://github.com/kelsS/kelsS.github.io#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
 }
