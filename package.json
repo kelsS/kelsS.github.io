@@ -4,6 +4,7 @@
   "description": "## Site theme - [Dracula](https://draculatheme.com/)",
   "main": "index.js",
   "scripts": {
+    "start": "eleventy --watch --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
