@@ -1,7 +1,7 @@
 {
-  "name": "kelsS.github.io",
+  "name": "kelss.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Site theme - [Dracula](https://draculatheme.com/)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,5 @@
     "url": "https://github.com/kelsS/kelsS.github.io/issues"
   },
   "homepage": "https://github.com/kelsS/kelsS.github.io#readme",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {}
 }
