@@ -14,29 +14,33 @@
     - tiktok? (a11y detective)
   - top 3 projects (Codepen)
   - top 3 projects (Github)
+
 - About
   - longer bio
   - 1 fun fact? (non sensitive info)
   - cat photos
   - certifications
+
 - Fav Resources
   - resource dump (links, videos, images)
+
 - Fav Code Snippets
   - code snippet dump
+
 - Projects
   - filter by tag
-    -tag1
-    -tag2
-    -etc...
-  - Project 1
-    -tag (ex: app)
-  - Project 2
-    -tag (ex: chrome extension)
-    -tag (a11y)
+    - tag1
+    - tag2
     - etc...
-    -tag (art)
-  - etc...
-    -tag (build)
+  - Project 1
+    - tag (ex: app)
+  - Project 2
+    - tag (ex: chrome extension)
+    - tag (a11y)
+    - etc...
+    - tag (art)
+    - etc...
+    - tag (build)
 
 ## Site theme
 
