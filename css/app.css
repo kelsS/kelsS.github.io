@@ -115,6 +115,7 @@ h6 {
 }
 
 /* limit max characters to 70 for readability */
-.max-chars {
+.max-chars,
+p {
     max-width: 70ch;
 }

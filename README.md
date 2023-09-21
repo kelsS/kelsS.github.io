@@ -17,9 +17,9 @@
 
 - About
   - longer bio
-  - 1 fun fact? (non sensitive info)
-  - cat photos
   - certifications
+  - Random fact (find api to use?)
+  - cat photos
 
 - Fav Resources
   - resource dump (links, videos, images)
