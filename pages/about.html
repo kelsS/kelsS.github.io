@@ -13,16 +13,46 @@
 
 <body>
 
-    <main>
+    <header>
+        <nav aria-label="main">
 
-        <section id="longer-bio">
+            <h2 id="main-nav-heading">Main nav</h2>
+            <ul aria-labelledby="main-nav-heading">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li aria-label="Current page.">
+                    About
+                </li>
+                <li>
+                    <a href="fav-code-snippets.html">Fav Code Snippets</a>
+                </li>
+                <li>
+                    <a href="fav-resources.html">Fav Resources</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About</h1>
+
+        <section id="longer-bio" aria-labelledby="longer-bio-heading">
+
+            <h2 id="longer-bio-heading">More information about me.</h2>
             <figure>
                 <img src="" alt="Photo of Kelsey Swanson.">
             </figure>
             <p>Kelsey's longer bio</p>
+
         </section>
 
-        <section id="certs">
+        <section id="certs" aria-labelledby="certs-heading">
+            <h2 id="certs-heading">Certifications</h2>
+
             <figure class="cert-card">
                 <img src="../assets/img/verified-cert-ks-intro-weba11y.png" alt="Official EDX certificate with date of completion.">
                 <figcaption>Introduction to Web Accessibility</figcaption>
@@ -44,11 +74,14 @@
             </figure>
         </section>
 
-        <section id="random">
+        <section id="random" aria-labelledby="random-info-heading">
+            <h2 id="random-info-heading">Some random facts.</h2>
             <p>Random info here.</p>
         </section>
 
-        <section id="cat-photos-gallery">
+        <section id="cat-pics-gallery" aria-labelledby="cat-pics-heading">
+            <h2 id="cat-pics-heading">Pictures of my beloved felines.</h2>
+
             <figure class="cat-photo polaroid"
                 <img src="" alt="one of my cats">
                 <figcaption>Here is one of my cats</figcaption>

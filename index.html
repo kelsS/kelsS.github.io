@@ -12,33 +12,37 @@
 </head>
 
 <body>
-   <main>
-        <h1>A11y Detective</h1>
 
+    <header>
         <nav aria-label="main">
 
             <h2 id="main-nav-heading">Main nav</h2>
             <ul aria-labelledby="main-nav-heading">
-                <li>
+                <li aria-label="Current page.">
                     <a href="/">Home</a>
                 </li>
                 <li>
                     <a href="./pages/about.html">About</a>
                 </li>
                 <li>
-                    <a href="./pages/fav-resources.html">Fav Resources</a>
+                    <a href="./pages/fav-code-snippets.html">Fav Code Snippets</a>
                 </li>
                 <li>
-                    <a href="./pages/fav-code-snippets.html">Fav Code Snippets</a>
+                    <a href="./pages/fav-resources.html">Fav Resources</a>
                 </li>
                 <li>
                     <a href="./pages/projects.html">Projects</a>
                 </li>
             </ul>
         </nav>
+    </header>
 
-        <section id="a11y-def" class="max-chars">
-            <h2>So what does a11y mean anyway?</h2>
+   <main>
+
+        <h1>A11y Detective</h1>
+
+        <section id="a11y-def" class="max-chars" aria-labelledby="a11y-def-heading">
+            <h2 id="a11y-def-heading">So what does a11y mean anyway?</h2>
 
             <p>
                 “a11y” stands for “accessibility.” It is a numeronym, with 11 representing the count of letters between the letter a and the letter y. Other numeronyms you may be familiar with include: i18n (internationalization), P2P (peer to peer), WWII (World War 2), etc.
@@ -48,9 +52,12 @@
 
         </section>
 
-        <section id="short-bio" class="max-chars">
-            <h2>A little bit about me</h2>
+        <section id="short-bio" class="max-chars" aria-labelledby="short-bio-heading">
+
+            <h2 id="short-bio-heading">A little bit about me</h2>
+
             <p>I work as a senior software engineer, always learning and striving to create accessible websites, and web applications. I endeavor to make inclusive software a reality, tea in hand, and with tenacity in every keypress.</p>
+
         </section>
 
         <section id="findme-on-social">
@@ -74,8 +81,8 @@
             </ul>
         </section>
 
-        <section id="top3-projects-cp">
-            <h2>Top 3 projects on Codepen</h2>
+        <section id="top3-projects-cp" aria-labelledby="top3-projects-cp-heading">
+            <h2 id="top3-projects-cp-heading">Top 3 projects on Codepen</h2>
 
             <div class="cp-embed">
                 <h3>Table of Contents Component (Vanilla JS)</h3>
@@ -113,9 +120,8 @@
         </section>
         
 
-        <section id="top3-projects-gh">
-            <h2>Top 3 projects on Github</h2>
-            <!-- use iframe method mentioned in simplifiying web a11y on linkedin -->
+        <section id="top3-projects-gh" aria-labelledby="top3-projects-gh-heading">
+            <h2 id="top3-projects-gh-heading">Top 3 projects on Github</h2>
 
             <div class="a11y-iframe">
 
