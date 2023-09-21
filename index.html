@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A11y Detective</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
@@ -39,9 +42,9 @@
             <p>A11y stands for accessibility</p>
         </section>
 
-        <section id="short-bio">
+        <section id="short-bio" class="max-chars">
             <h2>Short Bio</h2>
-            <p>Here is a short bio about me</p>
+            <p>I work as a senior software engineer, always learning and striving to create accessible websites, and web applications. I endeavor to make inclusive software a reality, tea in hand, and with tenacity in every keypress.</p>
         </section>
 
         <section id="findme-on-social">
@@ -67,13 +70,116 @@
 
         <section id="top3-projects-cp">
             <h2>Top 3 projects on Codepen</h2>
-            <!-- use iframe method mentioned in simplifiying web a11y on linkedin with codepen embeds -->
+
+            <div class="cp-embed">
+                <h3>Table of Contents Component (Vanilla JS)</h3>
+
+                <p class="codepen" data-height="404" data-theme-id="40900" data-default-tab="result" data-slug-hash="qBodOWp" data-preview="true" data-user="kelsS" style="height: 404px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/kelsS/pen/qBodOWp">
+                    Table of Contents Component - Vanilla JS</a> by Kelsey (<a href="https://codepen.io/kelsS">@kelsS</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+
+            <div class="cp-embed">
+                <h3>Progress Bar (Vanilla JS)</h3>
+
+                <p class="codepen" data-height="404" data-theme-id="40900" data-default-tab="result" data-slug-hash="zYEMmWo" data-preview="true" data-user="kelsS" style="height: 404px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/kelsS/pen/zYEMmWo">
+                    Accessible Animated Progress Button</a> by Kelsey (<a href="https://codepen.io/kelsS">@kelsS</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            </div>
+
+            <div class="cp-embed">
+                <h3>Copy to Clipboard (Vanilla JS)</h3>
+                <p class="codepen" data-height="404" data-theme-id="40900" data-default-tab="result" data-slug-hash="jOaqYLP" data-preview="true" data-user="kelsS" style="height: 404px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/kelsS/pen/jOaqYLP">
+                    Accessible Copy to Clipboard</a> by Kelsey (<a href="https://codepen.io/kelsS">@kelsS</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </div>
+
         </section>
         
 
         <section id="top3-projects-gh">
             <h2>Top 3 projects on Github</h2>
             <!-- use iframe method mentioned in simplifiying web a11y on linkedin -->
+
+            <div class="a11y-iframe">
+
+                <iframe
+                width="720"
+                height="540"
+                src="https://calolater.kels.tech/"
+                srcdoc="
+                  <style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                  <a href=https://calolater.kels.tech/>
+                    <img 
+                      src=assets/img/calolator-screenshot.png
+                      alt='Calolater app'>
+                  </a>"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                title="Calolater app"
+                loading="lazy"
+              ></iframe>
+
+            </div>
+
+            <div class="a11y-iframe">
+
+                <iframe
+                width="720"
+                height="540"
+                src="#"
+                srcdoc="
+                  <style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                  <a href=#>
+                    <img 
+                      src=assets/img/under-construction.jpg
+                      alt='Project under construction.'>
+                  </a>"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                title="Project under construction"
+                loading="lazy"
+              ></iframe>
+      
+              <p><a href="https://www.freepik.com/free-vector/construction_4811974.htm#query=work%20in%20progress&position=28&from_view=keyword&track=ais">Image by gstudioimagen</a> on Freepik</p>
+                  
+            </div>
+
+            <div class="a11y-iframe">
+
+                <iframe
+                width="720"
+                height="540"
+                src="#"
+                srcdoc="
+                  <style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                  <a href=#>
+                    <img 
+                      src=assets/img/under-construction.jpg
+                      alt='Project under construction.'>
+                  </a>"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                title="Project under construction"
+                loading="lazy"
+              ></iframe>
+      
+              <p><a href="https://www.freepik.com/free-vector/construction_4811974.htm#query=work%20in%20progress&position=28&from_view=keyword&track=ais">Image by gstudioimagen</a> on Freepik</p>
+                  
+            </div>
         </section>
 
    </main> 
