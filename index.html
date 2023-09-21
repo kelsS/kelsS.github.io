@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body>
+<body class="grid-container">
 
-    <header>
+    <header class="flex-container container">
         <nav aria-label="main">
 
-            <h2 id="main-nav-heading">Main nav</h2>
+            <h2 id="main-nav-heading">Logo - A11y Detective</h2>
             <ul aria-labelledby="main-nav-heading">
                 <li aria-label="Current page.">
                     <a href="/">Home</a>
@@ -37,11 +37,11 @@
         </nav>
     </header>
 
-   <main>
+   <main class="flex-container container">
 
         <h1>A11y Detective</h1>
 
-        <section id="a11y-def" class="max-chars" aria-labelledby="a11y-def-heading">
+        <section id="a11y-def" class="max-chars container" aria-labelledby="a11y-def-heading">
             <h2 id="a11y-def-heading">So what does a11y mean anyway?</h2>
 
             <p>
@@ -81,8 +81,9 @@
             </ul>
         </section>
 
-        <section id="top3-projects-cp" aria-labelledby="top3-projects-cp-heading">
-            <h2 id="top3-projects-cp-heading">Top 3 projects on Codepen</h2>
+        <h2 id="top3-projects-cp-heading">Top 3 projects on Codepen</h2>
+
+        <section id="top3-projects-cp" class="cols-3" aria-labelledby="top3-projects-cp-heading">
 
             <div class="cp-embed">
                 <h3>Table of Contents Component (Vanilla JS)</h3>
@@ -119,14 +120,14 @@
 
         </section>
         
+        <h2 id="top3-projects-gh-heading">Top 3 projects on Github</h2>
 
-        <section id="top3-projects-gh" aria-labelledby="top3-projects-gh-heading">
-            <h2 id="top3-projects-gh-heading">Top 3 projects on Github</h2>
-
+        <section id="top3-projects-gh" class="cols-3" aria-labelledby="top3-projects-gh-heading">
+        
             <div class="a11y-iframe">
 
                 <iframe
-                width="720"
+                width=""
                 height="540"
                 src="https://calolater.kels.tech/"
                 srcdoc="
@@ -152,7 +153,7 @@
             <div class="a11y-iframe">
 
                 <iframe
-                width="720"
+                width=""
                 height="540"
                 src="#"
                 srcdoc="
@@ -176,7 +177,7 @@
             <div class="a11y-iframe">
 
                 <iframe
-                width="720"
+                width=""
                 height="540"
                 src="#"
                 srcdoc="
@@ -199,6 +200,22 @@
         </section>
 
    </main> 
+
+   <footer class="footer-bg">
+        <div class="container">
+            <h2 class="theme">Theme colors by
+                <a href="https://draculatheme.com/" class="link-icon">@Dracula<span class="visually-hidden">. Goes to Draculatheme.com</span></a>
+            </h2>
+
+         
+            <div class="app-by">
+                <p>Site by <a href="https://github.com/kelsS" class="link-icon">Kelsey<span aria-hidden="true">🐙</span><span class="visually-hidden">. Goes to Github.com</span>
+                </a></p>
+            </div>
+            
+        </div>
+    </footer>
+
 </body>
 
 </html>
