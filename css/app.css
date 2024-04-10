@@ -89,8 +89,9 @@ h6 {
     --drc-lt-black: #454158;
 }
 
-*:focus {
-    outline: 5px dotted var(--drc-pink);
+*:focus,
+a:hover {
+    outline: 5px dotted var(--drc-green);
 }
 
 /* !important is required */
@@ -129,6 +130,16 @@ p {
 .cols-3 > * {
     width: 100%;
 }
+
+body {
+    background-color: var(--drc-black);
+    color: var(--drc-white);
+}
+
+a {
+    color: var(--drc-cyan); 
+}
+
 
 header {
     grid-area: header;
@@ -248,15 +259,6 @@ footer a:hover {
     color: var(--drc-green);
 }
 
-.link-icon:after {
-    position: absolute;
-    margin-left: 8px;
-    margin-top: 16px;
-    font: var(--fa-font-solid);
-    content: "\f08e";
-    font-size: 16px;
-}
-
 .app-by {
     display: flex;
     flex-direction: column;
@@ -281,15 +283,6 @@ footer a:hover {
 .app-by a:focus,
 .app-by a:hover {
     outline: 5px dotted var(--drc-green);
-}
-
-.link-icon:after {
-    position: absolute;
-    margin-left: 8px;
-    margin-top: 16px;
-    font: var(--fa-font-solid);
-    content: "\f08e";
-    font-size: 16px;
 }
 
 /* Media queries */
