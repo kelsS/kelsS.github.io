@@ -134,6 +134,7 @@ p {
 body {
     background-color: var(--drc-black);
     color: var(--drc-white);
+    font-family: "JetBrains Mono", monospace;
 }
 
 a {
@@ -231,7 +232,7 @@ footer {
     border-top: 4px solid var(--drc-pink);
     padding: 45px;
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     /* @todo: change to css grid*/
 }
 
@@ -302,4 +303,17 @@ footer a:hover {
         flex-direction: row;
         align-items: center;
     }
+}
+
+section {
+    align-items: flex-end;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+#top3-projects-cp,
+#top3-projects-gh {
+    padding: 30px 16px;
 }
