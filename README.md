@@ -58,3 +58,9 @@ Pink         | `#FF80BF` | `255, 128, 191` | `330° 100% 75%`
 Purple       | `#9580FF` | `149, 128, 255` | `250° 100% 75%`
 Red          | `#FF9580` | `255, 149, 128` | `10°  100% 75%`
 Yellow       | `#FFFF80` | `255, 255, 128` | `60°  100% 75%`
+
+# @todo: update color pallete to match colors in css file
+# @todo: add feature - rate my accessibility features
+# @todo: add feature - accessibility commitment statement
+# @todo: add feature - feedback form for a11y improvements of website
+# @todo: make a bluesky account ONLY for front end and a11y stuff!

@@ -330,6 +330,14 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .box-fullwidth {
+    width: 100%;
+  }
+
+  .cp_embed_wrapper {
+    width: 100%;
+  }
   
   nav {
     width: 100%;
