@@ -160,16 +160,16 @@
   }
   
   
-  .new-tab,
+  .new-site-domain,
   .content-link,
   .icon {
     text-decoration: none;
   }
   
-  .new-tab:before,
+  .new-site-domain:before,
   .content-link:before,
   .icon:before,
-  .new-tab:after,
+  .new-site-domain:after,
   .content-link:after,
   .icon:after {
     font-family: var(--ft-family-icons);
@@ -177,7 +177,7 @@
     font-size: var(--ft-size-base);
   }
   
-  .new-tab:after {
+  .new-site-domain:after {
     margin-left: 0px
   }
   
@@ -201,7 +201,7 @@
     padding-left: 10px;
   }
   
-  .new-tab:before,
+  .new-site-domain:before,
   .content-link:before {
     margin-right: 6px;
   }
@@ -210,7 +210,7 @@
     margin-right: 10px;
   }
   
-  .new-tab:after {
+  .new-site-domain:after {
     content: var(--ft-icon-new-tab);
   }
   
@@ -388,6 +388,21 @@
   
   main {
     padding: var(--ft-size-base);
+  }
+
+  .socials-list,
+  .socials-list-item,
+  .socials-list-link {
+    display: flex;
+    list-style: none;
+  }
+
+  .socials-list {
+    padding: 0;
+  }
+
+  .socials-link {
+    padding: 16px;
   }
   
   /* Extra small devices (portrait phones, less than 576px) */
