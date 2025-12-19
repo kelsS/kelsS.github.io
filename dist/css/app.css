@@ -138,7 +138,7 @@
   
   a:focus,
   button:focus
-  [aria-pressed="true"] {
+  [aria-current="page"] {
     outline: 2px dashed var(--magenta);
     outline-offset: 4px;
     border-radius: 2px;
@@ -147,7 +147,7 @@
   
   a:hover,
   button:hover,
-  [aria-pressed="true"]:hover {
+  [aria-current="page"]:hover {
     outline: 2px dashed var(--red);
     color: var(--red);
     outline-offset: 4px;
@@ -236,14 +236,14 @@
     content: var(--ft-icon-nav-location); 
   }
   
-  [aria-pressed="true"].icon-active:focus,
-  [aria-pressed="true"].icon-active:hover {
+  [aria-current="page"].icon-active:focus,
+  [aria-current="page"].icon-active:hover {
     outline: 2px solid var(--red);
     color: var(--red);
   }
   
-  [aria-pressed="true"].icon-active,
-  [aria-pressed="true"].icon-active {
+  [aria-current="page"].icon-active,
+  [aria-current="page"].icon-active {
     outline: 2px dashed var(--green);
     color: var(--green);
   }
