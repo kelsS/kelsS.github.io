@@ -230,7 +230,8 @@
   .icon-prjs:after,
   .icon-resume:after,
   .icon-about:after,
-  .icon-blog:after
+  .icon-blog:after,
+  .icon-home:after
   {
     content: var(--ft-icon-nav-location); 
   }
