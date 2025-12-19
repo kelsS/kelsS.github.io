@@ -27,33 +27,36 @@
   <main id="main" tabindex="-1">
   
     <div class="box">
-      <div class="profile-box">
+      <section class="profile-box">
         <img src="https://assets.codepen.io/755519/hand-drawn-profile-pic.png?format=webp" alt="A hand-drawn portrait of Kelsey, she is smiling and has glasses and long green hair styled in a braid over her shoulder. She is wearing a green top and a necklace with a pendant shaped like a spider featuring a purple body. The sketch is done in soft pencil tones with subtle shading and a warm beige background." class="profile-img">
-      </div>
+      </section>
     </div>
   
     <div class="box">
-      <nav id="main-nav" class="nav-box">
+      <nav id="main-nav" class="nav-box" aria-label="Main">
         <ul class="list-unstyled nav-list">
           <li class="nav-item">
-            <a href="#" class="nav-link icon icon-cps">Codepens</a>
+            <a href="./app.html" class="nav-link icon icon-home icon-active" aria-pressed="true">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link icon icon-prjs">Projects</a>
+            <a href="#top3-codepens" class="nav-link icon icon-cps">Codepens</a>
+          </li>
+          <li class="nav-item">
+            <a href="#pg-projects" class="nav-link icon icon-prjs">Projects</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link icon icon-resume">Resumé</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link icon icon-about icon-active" aria-pressed="true">Blog</a>
+            <a href="#" class="nav-link icon icon-blog">Blog</a>
           </li>
         </ul>
       </nav>
     </div>
   
-    <div id="pg-about" class="box">
+    <section id="pg-about" class="box" aria-labelledby="title-about-me">
   
-      <h2 class="icon icon-about icon-active icon-heading">About me</h2>
+      <h2 id="title-about-me" class="icon icon-about icon-active icon-heading">About me</h2>
   
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa dolorum rerum ab eos excepturi nobis inventore obcaecati itaque harum, tenetur magni quibusdam voluptate fugit aliquam! Incidunt id neque modi.</p>
   
@@ -61,7 +64,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis beatae velit, <a href="#" class="content-link">Content link</a> assumenda error delectus itaque earum quam sit harum voluptate mollitia placeat officiis fugit et vero! Quaerat dolor culpa perspiciatis?
         <a href="#" class="new-site-domain">New website link <span class="visually-hidden">Opens a link to another website</span></a>
       </p>
-    </div>
+    </section>
   
     <!--   <div id="pg-styleguide" class="box">
   
@@ -87,9 +90,9 @@
       <button>Example button</button>
     </div> -->
 
-    <section id="top3-codepens" class="box box-fullwidth">
+    <section id="top3-codepens" tabindex="-1" class="box box-fullwidth" aria-labelledby="title-3-fav-cps">
 
-      <h2>Top 3 fav Codepens</h2>
+      <h2 id="title-3-fav-cps">Top 3 fav Codepens</h2>
 
       <h2> 1. Favorite Codepen: Web Component: Accessible Animated Progress Button</h2>
       <!-- @todo: add star icons on both sides of the h2 text -->
@@ -126,21 +129,34 @@
       </div>
     </section>
 
-    <section id="socials" class="box box-fullwidth">
-      <ul class="socials-list">
-        <li class="socials-list-item">
-          <a href="" class="socials-link">Linkedin</a>
-        </li>
-        <li class="socials-list-item">
-          <a href="https://codepen.io/kelsS" class="socials-link">Codepen</a>
-        </li>
-        <li class="socials-list-item">
-          <a href="https://github.com/kelsS" class="socials-link">Github</a>
-        </li>
-        <li class="socials-list-item">
-          <a href="https://bsky.app/profile/a11ydetective.bsky.social" class="socials-link">Bluesky</a>
-        </li>
-      </ul>
+    <section id="pg-projects" tabindex="-1" class="box box-fullwidth" aria-labelledby="title-recent-prjs">
+      <h2 id="title-recent-prjs">Recent projects!</h2>
+
+      <h3>Interested in finding out more about stuff I am working?</h3>
+
+      <a href="./projects.html" class="content-link">All projects</a>
+    </section>
+
+    <section id="pg-socials" class="box box-fullwidth" aria-labelledby="title-socials">
+
+      <h2 id="title-socials">Find me at some of these other places...</h2>
+
+      <nav id="nav-socials" class="box box-fullwidth" aria-label="Socials">
+        <ul class="socials-list">
+          <li class="socials-list-item">
+            <a href="" class="socials-link">Linkedin</a>
+          </li>
+          <li class="socials-list-item">
+            <a href="https://codepen.io/kelsS" class="socials-link">Codepen</a>
+          </li>
+          <li class="socials-list-item">
+            <a href="https://github.com/kelsS" class="socials-link">Github</a>
+          </li>
+          <li class="socials-list-item">
+            <a href="https://bsky.app/profile/a11ydetective.bsky.social" class="socials-link">Bluesky</a>
+          </li>
+        </ul>
+      </nav>
     </section>
   
   </main>

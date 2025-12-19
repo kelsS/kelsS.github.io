@@ -34,7 +34,9 @@
     --ft-icon-projects: "\f15b";
     --ft-icon-resume: "\f15c";
     --ft-icon-about: "\f2bb";
+    --ft-icon-blog: "\f187";
     --ft-icon-styleguide: "\f55d";
+    --ft-icon-home: "\f015";
     --ft-size-base: 16px;
     --ft-line-hght-base: 1.5;
     --ft-line-hght-med: 1.8;
@@ -42,7 +44,9 @@
     --rounded-border-base: 10px;
     --border-size-base: 2px;
     --border-style-base: solid;
-    --custom-ul-icon: "💚";
+    --custom-ul-icon-default: "💚";
+    --custom-ul-icon-pin: "📌";
+
   }
   
   [hidden] {
@@ -225,7 +229,8 @@
   .icon-cps:after,
   .icon-prjs:after,
   .icon-resume:after,
-  .icon-about:after
+  .icon-about:after,
+  .icon-blog:after
   {
     content: var(--ft-icon-nav-location); 
   }
@@ -267,9 +272,17 @@
   .icon-about:before {
     content: var(--ft-icon-about); 
   }
+
+  .icon-blog:before {
+    content: var(--ft-icon-blog); 
+  }
   
   .icon-styleguide:before {
     content: var(--ft-icon-styleguide); 
+  }
+
+  .icon-home:before {
+    content: var(--ft-icon-home);
   }
   
   .list-unstyled {
@@ -277,10 +290,14 @@
   }
   
   ul.custom-list li:before {
-    content: var(--custom-ul-icon);
+    content: var(--custom-ul-icon-default);
     float: left;
     margin: 0px 0 0 -46px;
     padding: 0 16px 0 0;
+  }
+
+  ul.custom-list.custom-list-pin li:before {
+    content: var(--custom-ul-icon-pin);
   }
   
   ul.custom-list li {
@@ -408,6 +425,219 @@
   .socials-link {
     padding: 16px;
   }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lt-gray);
+}
+
+figure img {
+  max-width: 100%;
+  width: 720px;
+  border: 8px solid var(--white);
+}
+
+figcaption {
+  margin: 32px 0;
+}
+
+.tag {
+  margin: 16px 0;
+  display: block;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+  /**
+  * acnh buttons
+  */
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .acnh-button {
+    --button-primary-bg: #8cdda4; /* Base green */
+    --button-primary-text: #364f3c; /* Darker green text */
+    --button-primary-hover-bg: #a3e6bb; /* Lighter green on hover */
+    --button-primary-hover-text: #2f4435;
+    --button-primary-active-bg: #77c28d; /* Darker green on active */
+    --button-primary-shadow: #66b27d; /* Shadow color */
+  
+    --button-secondary-bg: #f8c291; /* Base orange/peach */
+    --button-secondary-text: #6b4a32;
+    --button-secondary-hover-bg: #ffd1a6;
+    --button-secondary-hover-text: #5c3e2b;
+    --button-secondary-active-bg: #e6af7e;
+    --button-secondary-shadow: #d49c6d;
+  
+    --button-disabled-bg: #cccccc;
+    --button-disabled-text: #888888;
+    --button-disabled-shadow: #b3b3b3;
+  
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px; /* Highly rounded corners */
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden; /* For potential internal effects */
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Prevent text wrapping */
+  
+    /* Initial state */
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    box-shadow: 0 6px 0 var(--button-primary-shadow); /* "Pressed" shadow */
+    transform: translateY(0); /* Initial position for press effect */
+    transition:
+      background-color 0.2s ease-out,
+      color 0.2s ease-out,
+      transform 0.1s ease-out,
+      box-shadow 0.1s ease-out,
+      filter 0.1s ease-out; /* Smooth transitions */
+  }
+  
+  .acnh-button .button-text {
+    position: relative; /* Needed for text transformation if applied */
+    display: block; /* Ensures text occupies space correctly */
+    z-index: 2; /* Keep text above any potential overlay */
+  }
+  
+  /* Secondary Button Style */
+  .acnh-button--secondary {
+    background-color: var(--button-secondary-bg);
+    color: var(--button-secondary-text);
+    box-shadow: 0 6px 0 var(--button-secondary-shadow);
+  }
+  
+  /* Disabled Button Style */
+  .acnh-button--disabled {
+    background-color: var(--button-disabled-bg);
+    color: var(--button-disabled-text);
+    box-shadow: 0 6px 0 var(--button-disabled-shadow);
+    cursor: not-allowed;
+    transform: translateY(0) !important; /* Override active state */
+    filter: grayscale(0.5); /* Dim it out */
+    opacity: 0.8;
+  }
+  
+  /* Hover Effect (Primary) */
+  .acnh-button:not(:disabled):hover {
+    background-color: var(--button-primary-hover-bg);
+    color: var(--button-primary-hover-text);
+    transform: translateY(-2px) scale(1.02); /* Slight lift and scale */
+    box-shadow: 0 8px 0 var(--button-primary-shadow); /* Deeper shadow */
+    filter: brightness(1.05); /* Slightly brighter */
+  }
+  
+  /* Hover Effect (Secondary) */
+  .acnh-button--secondary:not(:disabled):hover {
+    background-color: var(--button-secondary-hover-bg);
+    color: var(--button-secondary-hover-text);
+    box-shadow: 0 8px 0 var(--button-secondary-shadow);
+  }
+  
+  /* Focus Effect (Keyboard navigation) */
+  .acnh-button:not(:disabled):focus {
+    background-color: var(--button-primary-hover-bg); /* Same as hover */
+    color: var(--button-primary-hover-text);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 0 var(--button-primary-shadow);
+    filter: brightness(1.05);
+    outline: 3px solid rgba(0, 123, 255, 0.5); /* A clear focus indicator */
+    outline-offset: 2px;
+  }
+  
+  .acnh-button--secondary:not(:disabled):focus {
+    background-color: var(--button-secondary-hover-bg);
+    color: var(--button-secondary-hover-text);
+    box-shadow: 0 8px 0 var(--button-secondary-shadow);
+  }
+  
+  /* Active/Pressed Effect (When clicked) */
+  .acnh-button:not(:disabled):active {
+    background-color: var(--button-primary-active-bg);
+    color: var(--button-primary-text); /* Revert text color or keep it */
+    transform: translateY(4px) scale(0.98); /* Simulate being pressed down */
+    box-shadow: 0 2px 0 var(--button-primary-shadow); /* Shadow almost disappears */
+    transition:
+      transform 0.05s ease-out,
+      box-shadow 0.05s ease-out,
+      background-color 0.05s ease-out; /* Quick transition for active */
+  }
+  
+  .acnh-button--secondary:not(:disabled):active {
+    background-color: var(--button-secondary-active-bg);
+    color: var(--button-secondary-text);
+    box-shadow: 0 2px 0 var(--button-secondary-shadow);
+  }
+  
+  /* JavaScript for adding a quick 'pop' class on click */
+  .acnh-button.pop-effect {
+    animation: acnh-pop 0.3s ease-out forwards;
+  }
+  
+  @keyframes acnh-pop {
+    0% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 6px 0 var(--button-primary-shadow);
+    }
+    25% {
+      transform: translateY(2px) scale(0.97);
+      box-shadow: 0 4px 0 var(--button-primary-shadow);
+    }
+    50% {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 7px 0 var(--button-primary-shadow);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 6px 0 var(--button-primary-shadow);
+    }
+  }
+  
+  /* Override pop-effect for secondary buttons to use their shadow */
+  .acnh-button--secondary.pop-effect {
+    animation: acnh-pop-secondary 0.3s ease-out forwards;
+  }
+  
+  @keyframes acnh-pop-secondary {
+    0% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 6px 0 var(--button-secondary-shadow);
+    }
+    25% {
+      transform: translateY(2px) scale(0.97);
+      box-shadow: 0 4px 0 var(--button-secondary-shadow);
+    }
+    50% {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 7px 0 var(--button-secondary-shadow);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 6px 0 var(--button-secondary-shadow);
+    }
+  }
+
+
+/**
+* MEDIA QUERIES - DO NOT ADD BELOW THIS SECTION
+*/  
   
   /* Extra small devices (portrait phones, less than 576px) */
   /* No media query since this is the default */
